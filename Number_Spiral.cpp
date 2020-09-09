@@ -64,22 +64,13 @@ int main() {
     w(t){
         ll y,x;
         sl(y);sl(x);
-        if(y>=x && y%2==0){
-            cout<<y*y - (x-1)<<endl; 
-        } 
-        else if(y>=x && y%2!=0){
-            cout<<y*(y-2)+(x+1)<<endl;
+        if(y>=x){
+            cout<<y*y - y + 1 - (y-x)<<endl; 
         }
-        else if(y<x && x%2!=0){
-            cout<<x*x - (y-1)<<endl;
+        else if(y<x){
+            cout<<x*x - x + 1 + (x-y)<<endl;
         }
-        else if(y<x && x%2==0){
-            cout<<x*(x-2)+(y+1)<<endl;
-        }
-
     }
-
-
     return 0;
 }
 
