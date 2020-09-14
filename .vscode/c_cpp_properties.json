@@ -10,7 +10,10 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "intelliSenseMode": "msvc-x64"
+            "intelliSenseMode": "msvc-x64",
+            "cppStandard": "c++17",
+            "cStandard": "c18",
+            "compilerPath": ""
         }
     ],
     "version": 4
