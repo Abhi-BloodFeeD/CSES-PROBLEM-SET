@@ -54,13 +54,14 @@ int main() {
     #endif
     ////CODE HERE ----------/////
     w(t){
+    //solution is based on two equation solution
+    // always think about solving problems in equations
         ll a,b;cin>>a>>b;
-        while(a>0 || b>0){
-            if(a>b){a-=2;b-=1;}
-            else{a-=1;b-=2;}
-        }
-        if(a==0 && b==0)
+        if(2*a-b>=0 && (2*a-b)%3==0 && 
+        2*b-a>=0 && (2*b-a)%3==0)
+        {
             cout<<"YES\n";
+        }
         else
             cout<<"NO\n";
     }
