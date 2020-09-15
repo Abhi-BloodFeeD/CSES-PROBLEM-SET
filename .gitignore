@@ -1,3 +1,5 @@
 chefina_and_swap
 chefina_and_swap.cpp
-chefina_and_swap.exe
+*.exe
+input.txt
+output.txt
