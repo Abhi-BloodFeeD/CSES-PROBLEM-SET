@@ -58,7 +58,5 @@ int main() {
         win=max(win,s);
     }
     cout<<win<<endl;
-
-
     return 0;
 }
