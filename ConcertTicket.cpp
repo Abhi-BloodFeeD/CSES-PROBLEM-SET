@@ -44,8 +44,8 @@ int main() {
     freopen("output.txt","w",stdout);
     #endif
     ////CODE HERE ----------/////
-    int n,m;cin>>n>>m;
-    set<array<int,2>>s;
+    ll n,m;cin>>n>>m;
+    set<array<ll,2>>s;
     fo(i,n){
         ll a;
         cin>>a;// price of ticket
@@ -62,12 +62,7 @@ int main() {
             --it;
             cout<<(*it)[0]<<"\n";
             s.erase(it);
-        }
-        
-    
-    
-    }
-    ll j=0;
-    
+        } 
+    }    
     return 0;
 }
