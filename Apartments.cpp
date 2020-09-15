@@ -44,12 +44,20 @@ int main() {
     freopen("output.txt","w",stdout);
     #endif
     ////CODE HERE ----------/////
-    ll n;cin>>n;
-    map<int,int> mp;
+    ll n,m,k;cin>>n>>m>>k;
+    ll a[n],b[m];
+    fo(i,n)
+        cin>>a[i];
+    fo(i,m)
+        cin>>b[i];
+    sort(a,a+n);sort(b,b+m);
+    ll j=0,ans=0;
     fo(i,n){
-        ll x;cin>>x;
-        mp[x]++;
+        while(j<m && b[j]<a[i]-k)
+            ++j;
+        if(j<m && b[j]<=a[i]+k)
+            ++j,++ans;
     }
-    cout<<mp.size()<<endl;
+    cout<<ans<<"\n";
     return 0;
 }
