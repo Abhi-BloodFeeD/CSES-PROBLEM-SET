@@ -44,25 +44,22 @@ int main() {
     freopen("output.txt","w",stdout);
     #endif
     ////CODE HERE ----------/////
-    ll n,m;cin>>n>>m;
-    set<array<ll,2>>s;
+    ll n;cin>>n;
+    map<ll,int>mp;
     fo(i,n){
-        ll a;
-        cin>>a;// price of ticket
-        s.insert({a,i});
+        ll a,b;
+        cin>>a>>b;
+        mp[a]++;
+        mp[b]--;
     }
-    fo(i,m){
-        ll k;
-        cin>>k;// max price for each customer.
-        auto it=s.lower_bound({k+1,0});
-        if(it==s.begin())
-            cout<<"-1\n";
-        else
-        {
-            --it;
-            cout<<(*it)[0]<<"\n";
-            s.erase(it);
-        } 
-    }    
+    ll s=0,win=0;
+    for(auto x:mp){
+        s+=x.S;
+        win=max(win,s);
+    }
+    
+    cout<<win<<endl;
+
+
     return 0;
 }
