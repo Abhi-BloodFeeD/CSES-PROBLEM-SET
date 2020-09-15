@@ -57,7 +57,6 @@ int main() {
         s+=x.S;
         win=max(win,s);
     }
-    
     cout<<win<<endl;
 
 
