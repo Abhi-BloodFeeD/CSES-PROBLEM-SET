@@ -5,12 +5,6 @@ using namespace std;
 #define fo(i,n) for(ll i=0;i<n;i++)
 #define Fo(i,k,n) for(ll i=k;k<n?i<n:i>n;k<n?i+=1:i-=1)
 #define ll long long
-#define si(x)	scanf("%d",&x)
-#define sl(x)	scanf("%lld",&x)
-#define ss(s)	scanf("%s",s)
-#define pi(x)	printf("%d\n",x)
-#define pl(x)	printf("%lld\n",x)
-#define ps(s)	printf("%s\n",s)
 #define deb(x) cout << #x << "=" << x << endl
 #define deb2(x, y) cout << #x << "=" << x << "," << #y << "=" << y << endl
 #define pb push_back
@@ -36,37 +30,32 @@ int rng(int lim) {
     uniform_int_distribution<int> uid(0,lim-1);
     return uid(rang);
 }
-int mpow(int base, int exp); 
-void ipgraph(int n, int m);
-void dfs(int u, int par);
 
 const int mod = 1000000007;
 const int N = 3e5, M = N;
 //=======================
-
+int n,p[20];
 int main() {
     //srand(chrono::high_resolution_clock::now().time_since_epoch().count());
-    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    //ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     
     #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     #endif
     ////CODE HERE ----------/////
-    ll n;cin>>n;
-    vl v,ap1,ap2;
-    ll sum1=0,sum2=0;
-    fo(i,n){ll x;cin>>x;v.pb(x);sum+=x;}
-    sortall(v);
-    ll min =INT_MAX;
-    int i=1;
-    while(i>-1){
-            ap1.pb(v[n-i]);
-            sum1-=v[n-1];sum2+=v[n-1];
-            
-        }
-    }
-    
-
+    cin>>n;
+    ll s=0,ans=0;
+    fo(i,n){cin>>p[i],s+=p[i];}
+   
+   for(int i=0;i<1<<n;i++){
+       ll cs=0;
+       fo(j,n)
+            if(i>>j&1)
+                cs+=p[j];
+        if(cs<=s/2)
+            ans=max(ans,cs);
+   }
+    cout<<s-2*ans;
     return 0;
 }
