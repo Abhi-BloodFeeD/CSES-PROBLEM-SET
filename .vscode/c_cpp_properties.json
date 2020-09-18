@@ -1,20 +1,18 @@
 {
     "configurations": [
-        {
-            "name": "Win32",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "intelliSenseMode": "msvc-x64",
-            "cppStandard": "c++17",
-            "cStandard": "c18",
-            "compilerPath": ""
-        }
+    {
+    "name": "Win32",
+    "compilerPath": "C:\\MinGW\\bin\\g++.exe",
+    "includePath": [
+    "${workspaceFolder}/**"
+    ],
+    "defines": [
+    "_DEBUG",
+    "UNICODE",
+    "_UNICODE"
+    ],
+    "intelliSenseMode": "${default}"
+    }
     ],
     "version": 4
 }
