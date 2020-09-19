@@ -24,7 +24,6 @@ typedef vector<pii>		vpii;
 typedef vector<pl>		vpl;
 typedef vector<vi>		vvi;
 typedef vector<vl>		vvl;
-}
 
 int mpow(int base, int exp); 
 
@@ -36,16 +35,29 @@ const int N = 2e5;
 //int av[N];
 
 int main() {
-	#ifndef ONLINE_JUDGE
-	freopen("input.txt","r",stdin);
-	freopen("output.txt","w",stdout);
-	#endif
-	//
-	//---code from here---
-	//for T test case uncoment this line
-	//w(t){   }
-  	
-    return 0; 
+  #ifndef ONLINE_JUDGE
+  freopen("input.txt","r",stdin);
+  freopen("output.txt","w",stdout);
+  #endif
+  //
+  //---code from here---
+  //for T test case uncoment this line
+  //w(t){   }
+  int n;cin>>n;
+  ll a[n];
+  ll s=0,ans=0;
+  map<ll,int> mp;
+  mp[0]++;
+  fo(i,n){
+    cin>>a[i];
+    s=(s+a[i]%n+n)%n;
+    ans+=mp[s];
+    mp[s]++;
+  }
+  cout<<ans<<endl;
+
+
+  return 0; 
 } 
   
 int mpow(int base, int exp) {
