@@ -41,8 +41,6 @@ int main() {
     fo(i,n){
         int a,d;
         cin>>a>>d;
-        v.pb(mp(a,1));
-        v.pb(mp(d,-1));
     }
     sortall(v);
     int val;
